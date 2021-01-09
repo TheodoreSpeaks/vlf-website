@@ -1,16 +1,20 @@
 <template>
-    <div class="comic-grid">
-        <div class="comic-panel" v-for="m in 8" :key="m">
-            <v-img class="comic-panel" height="256" width="256" src="../assets/comic_panel2.jpg"/>
-
+    <div class="comic-grid" background-color="background">
+        <TitlePanel name="A Christmas Story" date="25 December 2020"/>
+        <div class="comic-panel" v-for="m in 7" :key="m">
+        <v-img class="comic-panel" height="256" width="256" src="../assets/comic_panel2.jpg"/>
         </div>
     </div>
     
 </template>
 
 <script>
+import TitlePanel from './TitlePanel.vue';
 export default {
     name: 'ComicView',
+    components: {
+        TitlePanel,
+    },
     data: () => ({
         
     })
@@ -25,7 +29,8 @@ export default {
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
-    width: 100%
+    width: 100%;
+    background-color: #fdfcdc;
 }
 
 .comic-panel {

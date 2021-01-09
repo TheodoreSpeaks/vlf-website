@@ -5,7 +5,7 @@
       dark
       flat
     >
-    <v-img alt="Vivian Likes Fruit" contain height="60" width="0" src="../assets/vlf_logo.jpg"/>
+    <v-img alt="Vivian Likes Fruit" contain height="60" width="0" src="../assets/vlf_logo.png"/>
     <v-spacer/>
     <div class="header-links" v-for="(appbar_link, i) in appbar_links" :key="i">
       <v-btn color="black" :href="appbar_link.href" plain>
