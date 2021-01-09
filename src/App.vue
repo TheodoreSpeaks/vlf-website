@@ -2,21 +2,21 @@
   <v-app>
     <AppBar/>
     <v-main>
-      <HelloWorld/>
+      <ComicView/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
 import AppBar from './components/AppBar';
+import ComicView from './components/ComicView.vue';
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
     AppBar,
+    ComicView,
   },
 
   data: () => ({
@@ -24,16 +24,11 @@ export default {
 };
 </script>
 
-<style lang="css" scoped>
+<style lang="css">
 @import url(https://fonts.googleapis.com/css?family=Quicksand);
 .header-links {
   font-size: 24px;
   font-family: 'Quicksand';
-}
-
-a:link, a:visited {
-  text-decoration: none;
-  color: black;
 }
 
 </style>
