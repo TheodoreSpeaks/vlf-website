@@ -21,6 +21,7 @@ export default {
     width: 256px;
     height: 256px;
     padding: 32px 16px;
+    margin: 8px; 
     font-family: 'QuickSand';
 }
 
