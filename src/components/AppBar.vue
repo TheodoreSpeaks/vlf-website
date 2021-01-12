@@ -35,10 +35,8 @@ export default {
 </script>
 
 <style lang="css" scoped>
-@import url(https://fonts.googleapis.com/css?family=Quicksand);
 .header-links {
   font-size: 24px;
-  font-family: 'Quicksand';
 }
 
 a:link, a:visited {

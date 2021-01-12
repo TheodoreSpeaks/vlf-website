@@ -1,11 +1,20 @@
 <template>
     <v-card class="comic-view" color="background">
-    <div class="comic-grid" background-color="background">
+    <!-- <div class="comic-grid" background-color="background">
         <TitlePanel name="A Christmas Story" date="25 December 2020"/>
         <div class="comic-panel" v-for="m in 7" :key="m">
         <v-img class="comic-panel" height="256" width="256" src="../assets/comic_panel2.jpg"/>
         </div>
-    </div>
+    </div> -->
+    <carousel perPage=1 :perPageCustom="[[768, 2], [1024, 3]]" scrollPerPage=false>
+        <slide>
+        <TitlePanel name="A Christmas Story" date="25 December 2020"/>
+        </slide>
+
+        <slide v-for="i in 8" :key="i">
+            <v-img class="comic-panel" height="256" width="256" src="../assets/comic_panel2.jpg"/>
+        </slide>
+    </carousel>
     <v-card flat color="background">
         <v-btn plain>
             <v-icon size="48px">mdi-chevron-left</v-icon>
@@ -22,10 +31,13 @@
 
 <script>
 import TitlePanel from './TitlePanel.vue';
+import { Carousel, Slide } from 'vue-carousel';
 export default {
     name: 'ComicView',
     components: {
         TitlePanel,
+        Carousel,
+        Slide
     },
     data: () => ({
         

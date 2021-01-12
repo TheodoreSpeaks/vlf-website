@@ -15,14 +15,12 @@ export default {
 </script>
 
 <style>
-@import url(https://fonts.googleapis.com/css?family=Quicksand);
 .title-panel {
     background-color: #00afb9;
     width: 256px;
     height: 256px;
     padding: 32px 16px;
     margin: 8px; 
-    font-family: 'QuickSand';
 }
 
 </style>
