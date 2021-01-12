@@ -21,11 +21,11 @@ export default {
 
   data: () => ({
     appbar_links: [
-      { name: 'Art', href: 'www.google.com' },
-      { name: 'Blog', href: 'www.google.com' },
-      { name: 'Comics', href: 'www.google.com' },
-      { name: 'Projects', href: 'www.google.com' },
-      { name: 'About', href: 'www.google.com' }
+      { name: 'Art', href: '/art' },
+      { name: 'Blog', href: '/blog' },
+      { name: 'Comics', href: '/comics' },
+      { name: 'Projects', href: 'projects' },
+      { name: 'About', href: '/about' }
     ],
   }),
 };

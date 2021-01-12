@@ -1,12 +1,21 @@
 <template>
-  <div id="app">
+  <v-app id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <AppBar/>
     </div>
     <router-view/>
-  </div>
+  </v-app>
 </template>
+<script>
+
+import AppBar from '@/components/AppBar.vue'
+export default {
+  name: 'AppMain',
+  components: {
+    AppBar,
+  }
+}
+</script>
 
 <style lang="scss">
 #app {
@@ -17,16 +26,4 @@
   // color: #2c3e50;
 }
 
-#nav {
-  // padding: 30px;
-
-  // a {
-  //   font-weight: bold;
-  //   color: #2c3e50;
-
-  //   &.router-link-exact-active {
-  //     color: #42b983;
-  //   }
-  // }
-}
 </style>
