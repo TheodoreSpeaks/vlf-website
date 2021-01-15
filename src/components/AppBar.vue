@@ -1,21 +1,4 @@
 <template>
-    <v-app-bar
-      app
-      color="background"
-      dark
-      flat
-    >
-      <!-- <h1> Vivian Likes fruit? </h1> -->
-    <router-link to="/">
-      <img alt="Vivian Likes Fruit" contain height="60" src="../assets/vlf_logo.png"/>
-    </router-link>
-    <v-spacer/>
-    <div class="header-links" v-for="(appbar_link, i) in appbar_links" :key="i">
-      <v-btn color="black" :href="appbar_link.href" plain>
-        {{ appbar_link.name }}
-      </v-btn>
-    </div>
-    </v-app-bar>
 </template>
 
 <script>
@@ -23,6 +6,7 @@ export default {
   name: 'AppBar',
 
   data: () => ({
+    drawer: false,
     appbar_links: [
       { name: 'Art', href: '/art' },
       { name: 'Blog', href: '/blog' },

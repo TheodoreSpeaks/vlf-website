@@ -1,12 +1,6 @@
 <template>
     <v-card class="comic-view" color="background">
-    <!-- <div class="comic-grid" background-color="background">
-        <TitlePanel name="A Christmas Story" date="25 December 2020"/>
-        <div class="comic-panel" v-for="m in 7" :key="m">
-        <v-img class="comic-panel" height="256" width="256" src="../assets/comic_panel2.jpg"/>
-        </div>
-    </div> -->
-    <carousel perPage=1 :perPageCustom="[[768, 2], [1024, 3]]" scrollPerPage=false>
+    <carousel v-if="isMobile" perPage=1 :perPageCustom="[[768, 2], [1024, 3]]" scrollPerPage=false>
         <slide>
         <TitlePanel name="A Christmas Story" date="25 December 2020"/>
         </slide>
@@ -15,6 +9,12 @@
             <v-img class="comic-panel" height="256" width="256" src="../assets/comic_panel2.jpg"/>
         </slide>
     </carousel>
+    <div class="comic-grid" v-else background-color="background">
+        <TitlePanel name="A Christmas Story" date="25 December 2020"/>
+        <div class="comic-panel" v-for="m in 7" :key="m">
+        <v-img class="comic-panel" height="256" width="256" src="../assets/comic_panel2.jpg"/>
+        </div>
+    </div>
     <v-card flat color="background">
         <v-btn plain>
             <v-icon size="48px">mdi-chevron-left</v-icon>
@@ -39,9 +39,11 @@ export default {
         Carousel,
         Slide
     },
-    data: () => ({
-        
-    })
+    computed: {
+        isMobile() {
+            return this.$vuetify.breakpoint.xs || this.$vuetify.breakpoint.sm
+        }
+    }
     
 }
 </script>
